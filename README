@@ -30,6 +30,7 @@ The following OPTIONAL user stories are complete:
 *[X] Movies are displayed using a CollectionView instead of a tableView
 *[X] All images fade in as they are loading.
 *[X] Customize UI - Nav bar color - translucent background and themed title color and tint color. Add small title to collection view cells underneath picture.
+*[X] Edited title label to wrap/shrink text as needed.
 
 The following ADDITIONAL user stories are completed:
 
