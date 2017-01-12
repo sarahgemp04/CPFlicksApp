@@ -20,25 +20,26 @@
 
 The following REQUIRED functionality is complete:
 
-*[X] User can view a list of movies currently playing in theaters from the Movie Database.
-*[X] Poster images are loaded using the UIImageView category in the AFNetworking Library.
-*[X] User sees a loading state while waiting for the movies API
-*[X] User can pull to refresh the movie list.
+[X] User can view a list of movies currently playing in theaters from the Movie Database.
+
+[X] Poster images are loaded using the UIImageView category in the AFNetworking Library.
+[X] User sees a loading state while waiting for the movies API
+[X] User can pull to refresh the movie list.
 
 The following OPTIONAL user stories are complete:
 
-*[X] Movies are displayed using a CollectionView instead of a tableView
-*[X] All images fade in as they are loading.
-*[X] Customize UI - Nav bar color - translucent background and themed title color and tint color. Add small title to collection view cells underneath picture.
+[X] Movies are displayed using a CollectionView instead of a tableView
+[X] All images fade in as they are loading.
+[X] Customize UI - Nav bar color - translucent background and themed title color and tint color. Add small title to collection view cells underneath picture.
 
 Time Spent: 12 hours spent in total, roughly.
 
 The following ADDITIONAL user stories are completed:
 
-*[X] Add second view where prepareForSegue method is overwritten to send information from the pushed cell to the new viewController.
-*[X] Displays extra information about the movie: Viewer Rating, how many people voted, release year.
-*[X] Image on second view also fades in once segue is called.
-*[X] Edited title label to wrap/shrink text as needed.
+[X] Add second view where prepareForSegue method is overwritten to send information from the pushed cell to the new viewController.
+[X] Displays extra information about the movie: Viewer Rating, how many people voted, release year.
+[X] Image on second view also fades in once segue is called.
+[X] Edited title label to wrap/shrink text as needed.
 
 Here's a walkthrough of implemented user stories:
 recommend navigating to imgur site for best quality.
