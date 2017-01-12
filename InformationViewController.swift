@@ -7,14 +7,57 @@
 //
 
 import UIKit
+import AFNetworking
 
 class InformationViewController: UIViewController {
 
+    var summary: String?
+    var movieTitle: String?
+    var movieImage: URL?
+    var movRating: String?
+    var votes: String?
+    var date: String?
+    var genreList: String?
+    
+    @IBOutlet weak var currMovieImage: UIImageView!
+    
+    @IBOutlet weak var navBar: UINavigationItem!
+    @IBOutlet weak var currMovieTitle: UILabel!
+    @IBOutlet weak var currMovieSummary: UITextView!
+    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var numVotes: UILabel!
+    @IBOutlet weak var yearReleased: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navBar.title = movieTitle!
+        
+        currMovieTitle.text = movieTitle!
+       
+        currMovieSummary.text = summary!
+        rating.text = movRating! + " / 10"
+        numVotes.text = "(" + votes! + " votes)"
+        yearReleased.text = "(" + date!.substring(to: date!.index(date!.startIndex, offsetBy: 4)) + ")"
+        
+        let imageRequest = NSURLRequest(url: movieImage!)
+        currMovieImage.setImageWith(
+            imageRequest as URLRequest,
+            placeholderImage: nil,
+            success: { (imageRequest, imageResponse, image) -> Void in
+                
+                    self.currMovieImage.alpha = 0.0
+                    self.currMovieImage.image = image
+                    UIView.animate(withDuration: 1, animations: { () -> Void in
+                        self.currMovieImage.alpha = 1.0
+                    })
+            },
+            failure: { (imageRequest, imageResponse, error) -> Void in
+                // do something for the failure condition
+        })
 
-        // Do any additional setup after loading the view.
-    }
+       }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
