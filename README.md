@@ -64,10 +64,16 @@ The following ADDITIONAL user stories are completed:
 [X] Edited title label to wrap/shrink text as needed.
 
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories from week 1:
+
+http://imgur.com/ofAHEji
+http://i.imgur.com/ofAHEji.gif
+
+And here is a walkthrough of implemented user stories from week 2:
 recommend navigating to imgur site for best quality.
 
 http://i.imgur.com/Q4WIOQi.gif
+http://imgur.com/Q4WIOQi
 
 GIF created with [LiceCap](http://cockos.com/licecap/)
 
