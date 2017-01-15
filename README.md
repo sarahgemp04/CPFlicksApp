@@ -1,10 +1,10 @@
-#Week 1 Assignment -- Flixtr
+#Week 2 Assignment -- Flixtr
 
 /**
 *
 * SUBMITTED BY: Sarah Gemperle
 *
-* Date submitted: Jan 11, 2017
+* Date submitted: Jan 14, 2017
 * 
 * TIME SPENT: 4-5 hours spent in total, roughly.
 *
@@ -51,7 +51,7 @@ The following ADDITIONAL user stories are completed:
 Here's a walkthrough of implemented user stories:
 recommend navigating to imgur site for best quality.
 
-http://imgur.com/ofAHEji
+http://i.imgur.com/Q4WIOQi.gif
 
 GIF created with [LiceCap](http://cockos.com/licecap/)
 
