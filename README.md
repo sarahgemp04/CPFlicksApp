@@ -1,6 +1,6 @@
 #Week 2 Assignment -- Flixtr
 
-/**
+/*
 *
 * SUBMITTED BY: Sarah Gemperle
 *
@@ -8,7 +8,7 @@
 * 
 * TIME SPENT: 4 hours spent in total, roughly.
 *
-**/
+*/
 
 
 **Flixtr** is a Flicks app that displays Movies that are now playing in theater.
