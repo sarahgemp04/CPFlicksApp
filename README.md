@@ -1,14 +1,12 @@
 #Week 2 Assignment -- Flixtr
 
-/*
-*
+
 * SUBMITTED BY: Sarah Gemperle
 *
 * Date submitted: Jan 14, 2017
 * 
 * TIME SPENT: 4 hours spent in total, roughly.
-*
-*/
+
 
 
 **Flixtr** is a Flicks app that displays Movies that are now playing in theater.
@@ -20,62 +18,59 @@
 
 The following REQUIRED functionality is complete:
 
-[X] User can view a list of movies currently playing in theaters from the Movie Database.
+Week 1:
 
-[X] Poster images are loaded using the UIImageView category in the AFNetworking Library.
+* [X] User can view a list of movies currently playing in theaters from the Movie Database.
+* [X] Poster images are loaded using the UIImageView category in the AFNetworking Library.
+* [X] User sees a loading state while waiting for the movies API
+* [X] User can pull to refresh the movie list.
+* [X] User can view movie details by tapping on a cell.
 
-[X] User sees a loading state while waiting for the movies API
+Week 2:
 
-[X] User can pull to refresh the movie list.
-
-[X] User can view movie details by tapping on a cell.
-
-[X] User can select from a tab bar for either Now Playing or Top Rated movies.
-
-[X] Customized selection effect of the Collection View Cells-- none.
+* [X] User can select from a tab bar for either Now Playing or Top Rated movies.
+* [X] Customized selection effect of the Collection View Cells-- none.
 
 The following OPTIONAL user stories are complete:
 
-[X] Movies are displayed using a CollectionView instead of a tableView
+Week 1:
 
-[X] All images fade in as they are loading.
+* [X] Movies are displayed using a CollectionView instead of a tableView
+* [X] All images fade in as they are loading.
+* [X] Customize UI - Nav bar color - translucent background and themed title color and tint color
+* [X] Add small title to collection view cells underneath picture.
 
-[X] Customize UI - Nav bar color - translucent background and themed title color and tint color
+Week 2:
 
-[X] Add small title to collection view cells underneath picture.
-
-[X] Added images to the tabBar 
-
-[X] User can search for a movie --> Going to work on it.
-
-[X] Displays a network error when cannot retrieve data from API --> Going to work on it.
-
-[X] For faster load time, will display lower resolution images first --> Going to work on it.
+* [X] Added images to the tabBar 
+* [X] User can search for a movie --> Going to work on it.
+* [X] Displays a network error when cannot retrieve data from API --> Going to work on it.
+* [X] For faster load time, will display lower resolution images first --> Going to work on it.
 
 
-Time Spent: 4-5 hours spent in total, roughly.
+Time Spent: 4 hours spent in total, roughly.
 
 The following ADDITIONAL user stories are completed:
 
-[X] Displays extra information about the movie: Viewer Rating, how many people voted, release year.
+Week 1:
 
-[X] Image on second view also fades in once segue is called.
+* [X] Displays extra information about the movie: Viewer Rating, how many people voted, release year
+* [X] Image on second view also fades in once segue is called.
 
-[X] Edited title label to wrap/shrink text as needed.
+Week 2:
+
+* [X] Edited title label to wrap/shrink text as needed.
 
 
 Here's a walkthrough of implemented user stories from week 1:
 
-http://imgur.com/ofAHEji
+<img src='http://imgur.com/ofAHEji.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-http://i.imgur.com/ofAHEji.gif
+http://imgur.com/ofAHEji.gif
 
 And here is a walkthrough of implemented user stories from week 2:
-recommend navigating to imgur site for best quality.
 
-http://i.imgur.com/Q4WIOQi.gif
-
-http://imgur.com/Q4WIOQi
+<img src='http://i.imgur.com/Q4WIOQi.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://cockos.com/licecap/)
 
