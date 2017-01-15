@@ -44,8 +44,8 @@ Week 2:
 
 * [X] Added images to the tabBar 
 * [X] User can search for a movie --> Going to work on it.
-* [X] Displays a network error when cannot retrieve data from API --> Going to work on it.
-* [X] For faster load time, will display lower resolution images first --> Going to work on it.
+* [] Displays a network error when cannot retrieve data from API --> Going to work on it.
+* [] For faster load time, will display lower resolution images first --> Going to work on it.
 
 
 Time Spent: 4 hours spent in total, roughly.
