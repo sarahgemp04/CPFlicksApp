@@ -16,6 +16,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
         @IBOutlet weak var collectionView: UICollectionView!
         var movies: [NSDictionary]?
         var genreDic: [NSDictionary]?
+        var endpoint: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +24,14 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.dataSource = self
         collectionView.delegate = self
       
-        flowLayout.minimumInteritemSpacing = 1
-    
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(refreshControl:)), for: UIControlEvents.valueChanged)
         collectionView.insertSubview(refreshControl, at: 0)
         
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")!
+        let url = URL(string: "https://api.themoviedb.org/3/movie/\(endpoint!)?api_key=\(apiKey)")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         
@@ -67,7 +68,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         // Configure session so that completion handler is executed on main UI thread
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")!
+        let url = URL(string: "https://api.themoviedb.org/3/movie/\(endpoint!)?api_key=\(apiKey)")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
 
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -97,6 +98,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if let movies = movies {
+            print("TOTAL MOVIES COUNT IS:  \(movies.count)")
             return movies.count
         } else {
             return 0
@@ -108,39 +110,50 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCell
         
+        let color = UIColor.init(red:  0,
+                                 green: 0,
+                                 blue: 0,
+                                 alpha: 0)
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = color
+        cell.selectedBackgroundView = backgroundView
         
         let movie = movies![indexPath.row]
         let title = movie["title"] as! String
         let baseUrl = "https://image.tmdb.org/t/p/w500"
-        let posterPath = movie["poster_path"] as! String
-        let imageURL = (string: baseUrl + posterPath)
+        if let posterPath = movie["poster_path"] as? String {
+            let imageURL = (string: baseUrl + posterPath)
+            
+            let imageRequest = NSURLRequest(url: NSURL(string: imageURL)! as URL)
+            cell.posterView.setImageWith(
+                imageRequest as URLRequest,
+                placeholderImage: nil,
+                success: { (imageRequest, imageResponse, image) -> Void in
+                    
+                    // imageResponse will be nil if the image is cached
+                    if imageResponse != nil {
+                        print("Image was NOT cached, fade in image")
+                        cell.posterView.alpha = 0.0
+                        cell.posterView.image = image
+                        UIView.animate(withDuration: 1, animations: { () -> Void in
+                            cell.posterView.alpha = 1.0
+                        })
+                    } else {
+                        print("Image was cached so just update the image")
+                        cell.posterView.image = image
+                    }
+                },
+                failure: { (imageRequest, imageResponse, error) -> Void in
+                    // do something for the failure condition
+            })
+            
+
+        }
         
         cell.movieTitle.text = title
         
-        let imageRequest = NSURLRequest(url: NSURL(string: imageURL)! as URL)
-        cell.posterView.setImageWith(
-            imageRequest as URLRequest,
-            placeholderImage: nil,
-            success: { (imageRequest, imageResponse, image) -> Void in
-                
-                // imageResponse will be nil if the image is cached
-                if imageResponse != nil {
-                    print("Image was NOT cached, fade in image")
-                    cell.posterView.alpha = 0.0
-                    cell.posterView.image = image
-                    UIView.animate(withDuration: 1, animations: { () -> Void in
-                        cell.posterView.alpha = 1.0
-                    })
-                } else {
-                    print("Image was cached so just update the image")
-                    cell.posterView.image = image
-                }
-            },
-            failure: { (imageRequest, imageResponse, error) -> Void in
-                // do something for the failure condition
-        })
-        
-        //cell.posterView.setImageWith(imageURL as! URL)
+                //cell.posterView.setImageWith(imageURL as! URL)
         
         return cell
         
@@ -148,14 +161,18 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toInformation") {
+            
+            //Determine cell pushed and set its indexPath to let indexPath.
             let cell = sender as! UICollectionViewCell;
             let indexPath = collectionView.indexPath(for: cell);
             
+            //Access destintation view controller
             let destination = segue.destination as! InformationViewController
             
-            
+            //access the movie dictionary for the specific movie at the indexPath tapped on.
             let movie = movies![(indexPath!.row)]
            
+            //Define InformationViewController's global variables appropriately to the movie tapped's information.
             let baseUrl = "https://image.tmdb.org/t/p/w500"
             let posterPath = movie["poster_path"] as! String
             let imageURL = NSURL(string: baseUrl + posterPath)

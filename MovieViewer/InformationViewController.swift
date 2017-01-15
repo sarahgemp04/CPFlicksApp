@@ -20,10 +20,14 @@ class InformationViewController: UIViewController {
     var genreList: String?
     
     @IBOutlet weak var currMovieImage: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var currMovieSummary: UILabel!
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var currMovieTitle: UILabel!
-    @IBOutlet weak var currMovieSummary: UITextView!
+    @IBOutlet weak var infoSubView: UIView!
+   
+    @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var numVotes: UILabel!
     @IBOutlet weak var yearReleased: UILabel!
@@ -32,11 +36,15 @@ class InformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navBar.title = movieTitle!
-        
-        currMovieTitle.text = movieTitle!
+                currMovieTitle.text = movieTitle!
        
         currMovieSummary.text = summary!
+        currMovieSummary.sizeToFit()
+        
+        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: infoSubView.frame.origin.y + infoSubView.frame.size.height)
+        
+        navBar.title = movieTitle!
+        
         rating.text = movRating! + " / 10"
         numVotes.text = "(" + votes! + " votes)"
         yearReleased.text = "(" + date!.substring(to: date!.index(date!.startIndex, offsetBy: 4)) + ")"

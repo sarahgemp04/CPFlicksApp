@@ -6,7 +6,7 @@
 *
 * Date submitted: Jan 11, 2017
 * 
-* TIME SPENT: 12 hours spent in total, roughly.
+* TIME SPENT: 4-5 hours spent in total, roughly.
 *
 **/
 
@@ -25,18 +25,25 @@ The following REQUIRED functionality is complete:
 [X] Poster images are loaded using the UIImageView category in the AFNetworking Library.
 [X] User sees a loading state while waiting for the movies API
 [X] User can pull to refresh the movie list.
+[X] User can view movie details by tapping on a cell.
+[X] User can select from a tab bar for either Now Playing or Top Rated movies.
+[X] Customized selection effect of the Collection View Cells-- none.
 
 The following OPTIONAL user stories are complete:
 
 [X] Movies are displayed using a CollectionView instead of a tableView
 [X] All images fade in as they are loading.
-[X] Customize UI - Nav bar color - translucent background and themed title color and tint color. Add small title to collection view cells underneath picture.
+[X] Customize UI - Nav bar color - translucent background and themed title color and tint color
+[X] Add small title to collection view cells underneath picture.
+[X] Added images to the tabBar 
+[X] User can search for a movie --> Going to work on it.
+[X] Displays a network error when cannot retrieve data from API --> Going to work on it.
+[X] For faster load time, will display lower resolution images first --> Going to work on it.
 
-Time Spent: 12 hours spent in total, roughly.
+Time Spent: 4-5 hours spent in total, roughly.
 
 The following ADDITIONAL user stories are completed:
 
-[X] Add second view where prepareForSegue method is overwritten to send information from the pushed cell to the new viewController.
 [X] Displays extra information about the movie: Viewer Rating, how many people voted, release year.
 [X] Image on second view also fades in once segue is called.
 [X] Edited title label to wrap/shrink text as needed.
@@ -51,8 +58,5 @@ GIF created with [LiceCap](http://cockos.com/licecap/)
 ##Notes
 
 Describe any challenges encountered while building the app.
-
-Installing Pods. Had some difficulty during the installation and setup. First had
-to sudo install, then setup didn't work quite right. Got it working though!
 
 

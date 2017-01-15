@@ -15,7 +15,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let nowPlayingNavigationController = storyboard.instantiateViewController(withIdentifier: "MoviesNavigationController") as! UINavigationController
+        let nowPlayingViewController = nowPlayingNavigationController.topViewController as! MoviesViewController
+        nowPlayingViewController.endpoint = "now_playing"
+        nowPlayingNavigationController.tabBarItem.title = "Now Playing"
+        nowPlayingNavigationController.tabBarItem.image = #imageLiteral(resourceName: "nowPlaying")
+        
+        let topRatedNavigationController = storyboard.instantiateViewController(withIdentifier: "MoviesNavigationController") as! UINavigationController
+        let topRatedViewController = topRatedNavigationController.topViewController as! MoviesViewController
+        topRatedViewController.endpoint = "top_rated"
+          topRatedNavigationController.tabBarItem.title = "Top Rated"
+         topRatedNavigationController.tabBarItem.image = #imageLiteral(resourceName: "topRated")
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [nowPlayingNavigationController, topRatedNavigationController]
+        
+        let color = UIColor.init(red:  1,
+                                 green: 0.463,
+                                 blue: 0.2745,
+                                 alpha: 0.9)
+        
+        tabBarController.tabBar.barStyle = UIBarStyle.blackOpaque
+        tabBarController.tabBar.tintColor = color
+        
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
+        
+        
         return true
     }
 

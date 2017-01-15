@@ -19,36 +19,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.21274038461538447" green="0.21274038461538447" blue="0.21274038461538447" alpha="0.93125000000000002" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dkg-K6-Esm">
-                                    <size key="itemSize" width="180" height="283"/>
+                                    <size key="itemSize" width="180" height="275"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" misplaced="YES" reuseIdentifier="MovieCell" id="dX1-GB-QQR" customClass="MovieCell" customModule="MovieViewer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="283"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="275"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="180" height="283"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="275"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" id="Jf1-cQ-xhk">
-                                                    <frame key="frameInset" minX="8" minY="255" width="163" height="28"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="tintColor" red="0.44819711538461526" green="0.44819711538461526" blue="0.44819711538461526" alpha="0.56923491379310343" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.87510016030000004" green="0.87510016030000004" blue="0.87510016030000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" patternImage="439F2CA9-EA1B-4305-814D-84CCCB3E2949" colorSpace="pattern"/>
-                                                </label>
                                                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="E2x-vZ-l9V">
                                                     <frame key="frameInset" width="179" height="247"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <gestureRecognizers/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" id="Jf1-cQ-xhk">
+                                                    <frame key="frameInset" minX="8" minY="247" width="163" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="0.18278556030000001" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.44819711538461526" green="0.44819711538461526" blue="0.44819711538461526" alpha="0.56923491379310343" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="1" green="0.45935074460000003" blue="0.27942843820000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" patternImage="1829347D-9A72-46C3-B4E3-A38069B43699" colorSpace="pattern"/>
+                                                </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.25490196078431371" green="0.25490196078431371" blue="0.25490196078431371" alpha="0.1827855603448276" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="movieTitle" destination="Jf1-cQ-xhk" id="Ft9-Fj-rUz"/>
                                             <outlet property="posterView" destination="E2x-vZ-l9V" id="mt1-uX-OuZ"/>
@@ -87,62 +87,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="ACP-ba-E2q">
-                                <frame key="frameInset" minY="63" width="155" height="217"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="ACP-ba-E2q">
+                                <frame key="frameInset" minY="64" width="375" height="602"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" id="IFV-FJ-pop">
-                                <frame key="frameInset" minY="367" width="375" height="300"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="ruw-L7-QcR">
+                                <frame key="frameInset" minY="196" width="375" height="471"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25490196078431371" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <view contentMode="scaleToFill" misplaced="YES" id="Ydx-5s-fze">
-                                <frame key="frameInset" minY="339" width="375" height="8"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.46263309990000001" blue="0.27308164930000001" alpha="0.25126616376896549" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" id="IjN-Cu-uIE">
-                                <frame key="frameInset" minX="163" minY="63" width="212" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
-                                <color key="textColor" red="1" green="0.46263309989928858" blue="0.27308164928228096" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="(year)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lzD-Vk-Iag">
-                                <frame key="frameInset" minY="278" width="88" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="1" green="0.46263309989928858" blue="0.27308164928228096" alpha="0.82642780172413788" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="(votes)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sjL-fq-jWn">
-                                <frame key="frameInset" minX="163" minY="197" width="130" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.43464439655172415" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TFQ-5r-wA7">
-                                <frame key="frameInset" minX="163" minY="164" width="69" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="17"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" id="PEZ-rN-r90">
+                                        <rect key="frame" x="3" y="336" width="369" height="372"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(year)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lzD-Vk-Iag">
+                                                <frame key="frameInset" minX="247" minY="8" width="88" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.46263309989928858" blue="0.27308164928228096" alpha="0.82642780172413788" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" misplaced="YES" id="Ydx-5s-fze">
+                                                <frame key="frameInset" width="375" height="8"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.46263309990000001" blue="0.27308164930000001" alpha="0.25126616376896549" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TFQ-5r-wA7">
+                                                <frame key="frameInset" minX="247" minY="51" width="120" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="17"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(votes)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sjL-fq-jWn">
+                                                <frame key="frameInset" minX="245" minY="74" width="130" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.43464439655172415" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" id="kb7-EA-NFa">
+                                                <frame key="frameInset" minX="8" minY="110" width="359" height="228"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" adjustsLetterSpacingToFitWidth="YES" id="IjN-Cu-uIE">
+                                                <frame key="frameInset" minX="6" width="231" height="103"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <color key="textColor" red="1" green="0.45935074457612468" blue="0.27942843823478591" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="H5y-OT-aYD">
+                                                <frame key="frameInset" minX="156" minY="-8" width="47" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.2127403846" green="0.2127403846" blue="0.2127403846" alpha="0.93125000000000002" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="cJZ-un-AUd"/>
                     <connections>
+                        <outlet property="arrowImage" destination="H5y-OT-aYD" id="CsX-lW-Nsq"/>
                         <outlet property="currMovieImage" destination="ACP-ba-E2q" id="RIF-4a-QAa"/>
-                        <outlet property="currMovieSummary" destination="IFV-FJ-pop" id="FK1-65-0mV"/>
+                        <outlet property="currMovieSummary" destination="kb7-EA-NFa" id="5IJ-jU-OKP"/>
                         <outlet property="currMovieTitle" destination="IjN-Cu-uIE" id="vyX-Y8-ZOz"/>
+                        <outlet property="infoSubView" destination="PEZ-rN-r90" id="eO2-Sz-9AL"/>
                         <outlet property="navBar" destination="cJZ-un-AUd" id="WDn-Cf-c4U"/>
                         <outlet property="numVotes" destination="sjL-fq-jWn" id="hjM-dS-PpW"/>
                         <outlet property="rating" destination="TFQ-5r-wA7" id="nzs-el-ICU"/>
+                        <outlet property="scrollView" destination="ruw-L7-QcR" id="Rtw-Ig-9h4"/>
                         <outlet property="yearReleased" destination="lzD-Vk-Iag" id="D1K-Tm-OZT"/>
                     </connections>
                 </viewController>
@@ -153,7 +172,7 @@
         <!--Nav Controller View Controller-->
         <scene sceneID="tgS-Pj-Sha">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wfw-Zw-xiT" customClass="NavControllerViewController" customModule="MovieViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MoviesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Wfw-Zw-xiT" customClass="NavControllerViewController" customModule="MovieViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WJu-my-INI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -170,7 +189,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="439F2CA9-EA1B-4305-814D-84CCCB3E2949" width="512" height="512">
+        <image name="1829347D-9A72-46C3-B4E3-A38069B43699" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
