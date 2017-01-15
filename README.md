@@ -6,7 +6,7 @@
 *
 * Date submitted: Jan 14, 2017
 * 
-* TIME SPENT: 4-5 hours spent in total, roughly.
+* TIME SPENT: 4 hours spent in total, roughly.
 *
 **/
 
